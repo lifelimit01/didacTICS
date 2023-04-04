@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Raleway:wght@300;400;700&display=swap');
+
+:root{
+    --background: linear-gradient(135deg, #667eea7e 0%, #764ba298 100%);
+    --color-primary: #667eea;
+    --color-secondary: #764ba2;
+    --boton-padding: 20px 40px;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 80px 0;
+    max-width: 1200px;
+}
+
+.subtitle{
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    margin-bottom: 35px;
+}
+
+.hero{
+    height: 100vh;
+    background-image: var(--background), url('../assets/hero2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
+
+.hero .container{
+    padding: 0;
+}
+
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    height: 70px;
+    align-items: center;
+    font-weight: 700;
+}
+
+.nav--footer{
+    font-weight: 300;
+    justify-content: flex-start;
+}
+
+.nav__items{
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px 15px;
+    font-weight: inherit;
+}
+
+.nav__items--cta{
+    border: 1px solid #fff;
+}
+
+.nav__items--footer{
+    padding: 10px;
+}
+
+.hero__container{
+    display: flex;
+    height: calc(100vh - 70px);
+    align-items: center;
+    color: #fff;
+}
+
+.hero__texts{
+    width: 80%;
+    margin-bottom: 50px;
+}
+
+.hero__title{
+    font-size: 3.2rem;
+}
+
+.hero__subtitle{
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 15px 0;
+}
+
+.hero__sub{
+    font-size: 1rem;
+    font-weight: 200;
+    margin: 15px 0;
+}
+
+.hero__cta{
+   display: inline-block;
+   background: #fff;
+   padding: var(--boton-padding); 
+   color: var(--color-primary);
+   text-decoration: none;
+   border-radius: 40px;
+}
+
+.hero__wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+}
+
+/* Aspectos */
+.aspectos{
+    padding-top: 10;
+    text-align: center;
+}
+
+.aspectos__picture{
+    width: 600px;
+    height: 300px;
+    border-radius: 10%;
+    margin-bottom: 10px;
+    object-fit: cover; /*para no perder resolución*/
+    object-position: top;
+}
+
+.aspectos__copy{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.aspectos__cta{
+    display: inline-block;
+    margin-top: 30px;
+    background: var(--color-primary);
+    color: #fff;
+    text-decoration: none;
+    padding: var(--boton-padding);
+    border-radius: 40px;
+}
+
+.estandares{
+    padding-top: 10%;
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 80px;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+.estandares__img{
+    text-align: center;
+}
+
+.estandares__img--left{
+    text-align: left;
+}
+
+.estandares__img--right{
+    text-align: right;
+}
+
+.estandares__picturesection{
+    /*max-width: 80%;*/
+    width: 600px;
+    height: 300px;
+    border-radius: 10%;
+    margin-bottom: 10px;
+    object-fit: cover; /*para no perder resolución*/
+    object-position: top;
+}
+
+.estandares__picture{
+    /*max-width: 90%;*/
+    width: 300px;
+    height: 300px;
+    border-radius: 10%;
+    margin-bottom: 10px;
+    object-fit: cover; /*para no perder resolución*/
+    object-position: top;
+}
+
+.estandares__p{
+    width: 80%;
+    margin: 0 auto;
+}
+
+/*Galeria*/
+
+.galery_aspectos{
+    background: #120246;    
+}
+
+.aspectos__grid{
+    display: grid;
+    height: 550px;
+    grid-template-areas: 
+    "proteccion proteccion industrial industrial"
+    "proteccion proteccion autor ley";
+    gap: 10px;
+}
+
+.aspectos__item{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.aspectos_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.aspectos__item:nth-of-type(1){
+    grid-area: proteccion;
+}
+
+.aspectos__item:nth-of-type(2){
+    grid-area: industrial;
+}
+
+.aspectos__item:nth-of-type(3){
+    grid-area: autor;
+}
+
+.aspectos__item:nth-of-type(4){
+    grid-area: ley;
+}
+
+.aspectos__hover{
+    position: absolute;
+    background: #2b14dc8c;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(100%);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.aspectos__item:hover .aspectos__hover{
+    transform: translateX(0%);
+}
+
+.aspectos__icon{
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+/*Galeria Estándares*/
+.galery_estandares{
+    background: #120246;    
+}
+
+.estandares__grid{
+    display: grid;
+    height: 550px;
+    grid-template-areas: 
+    "tics tics riesgos riesgos"
+    "tics tics riesgos riesgos"
+    "COBIT nist itil itil";
+    gap: 10px;
+}
+
+.estandares__item{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.estandares_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.estandares__item:nth-of-type(1){
+    grid-area: tics;
+}
+
+.estandares__item:nth-of-type(2){
+    grid-area: riesgos;
+}
+
+.estandares__item:nth-of-type(3){
+    grid-area: COBIT;
+}
+
+.estandares__item:nth-of-type(4){
+    grid-area: nist;
+}
+
+.estandares__item:nth-of-type(5){
+    grid-area: itil;
+}
+
+.estandares__hover{
+    position: absolute;
+    background: #2b14dc8c;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(100%);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.estandares__item:hover .estandares__hover{
+    transform: translateX(0%);
+}
+
+.estandares_cont{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 10;
+    min-height: 400px;
+    row-gap: 10px;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.estandares__icon{
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.est__items{
+    color: #2b49ad;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px 15px;
+    font-weight: inherit;
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.title_contenido{
+    
+    color: #667eea;
+    font-size: 2rem;
+}
+
+.subtitle_contenido{
+    margin-top:10px; 
+    color: #2b49ad;
+    font-size: 2rem;
+}
+
+hr{
+    background-color: aqua;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border-width: 2px;
+    
+    }
+
+/*Nosotros*/
+
+.testimony__grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.testimony__item{
+    width: 95%;
+    margin: 0 auto;
+    background: var(--color-secondary);
+    box-shadow: 0 8px 10px rgba(66,66,66, .5);
+    border-radius: 7px;
+    padding: 30px 25px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.testimony__person{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.testimony__img{
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-right: 30px;
+}
+
+.testimony__name{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.testimony__number{
+    color: #E0AFE0;
+    font-weight: 700;
+}
+
+.testimony__par{
+    font-weight: 300;
+}
+
+/*fOOTER*/
+
+.footer{
+    background-color: var(--color-primary);
+}
+
+.footer__grid{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.footer__title{
+    font-weight: 400;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}   
+
+.footer__icons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
